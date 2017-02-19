@@ -12,7 +12,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
 // })
 
 .controller('ImageCtrl', function ($scope, $cordovaCamera, $cordovaFile, $cordovaFileTransfer, $cordovaDevice, $ionicPopup, $cordovaActionSheet) {
-  
+
   $scope.image = null;
  
   $scope.showAlert = function(title, msg) {
@@ -138,10 +138,17 @@ $scope.uploadImage = function() {
  
  //===================== The rest of the app comes in here
 })
+.config(function($sceDelegateProvider) {
+     $sceDelegateProvider.resourceUrlWhitelist([
+       // Allow same origin resource loads.
+       'self',
+       // Allow loading from our assets domain.  Notice the difference between * and **.
+       'http://youtu.be/**']);
 
-.config(function ($sceDelegateProvider) {
-    $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://192.168.43.78/petcare/']);
-})
+     // The blacklist overrides the whitelist so the open redirect here is blocked.
+     $sceDelegateProvider.resourceUrlBlacklist([
+       'http://myapp.example.com/clickThru**']);
+    })
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
