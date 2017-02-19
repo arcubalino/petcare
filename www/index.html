@@ -28,7 +28,7 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
@@ -40,7 +40,7 @@
       </ion-header-bar>
       <ion-content>
 
-      <div ng-controller="AppCtrl">
+     <!--  <div ng-controller="AppCtrl">
 
                 <div class="container" ng-show="LoginCtrl">
                       <div class="list">
@@ -56,10 +56,19 @@
                       </button>
                 </div>      
 
-      </div>
-
-
+      </div> -->
+      <img ng-src="{{pathForImage(image)}}" style="width: 100%; height: 100%;">
       </ion-content>
+    
+      <ion-footer-bar class="bar bar-positive">
+      <div class="button-bar">
+        <button class="button icon-left ion-camera" ng-click="loadImage()">Take Photo</button>
+        <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Upload</button>
+      </div>
+    </ion-footer-bar>
+
+    
+
     </ion-pane>
   </body>
 </html>
