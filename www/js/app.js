@@ -12,6 +12,7 @@ angular.module('starter', ['ionic', 'ngCordova'])
 // })
 
 .controller('ImageCtrl', function ($scope, $cordovaCamera, $cordovaFile, $cordovaFileTransfer, $cordovaDevice, $ionicPopup, $cordovaActionSheet) {
+  
   $scope.image = null;
  
   $scope.showAlert = function(title, msg) {

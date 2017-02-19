@@ -57,16 +57,44 @@
                 </div>      
 
       </div> -->
-      <!-- <img ng-src="{{pathForImage(image)}}" style="width: 100%; height: 100%;">
 
-       <div class="button-bar bar-positive">
-        <button class="button icon-left ion-camera" ng-click="loadImage()">Take Photo</button>
-        <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Upload</button>
-      </div> -->
+<!--       <div ng-controller="ImageCtrl">          
+          <img ng-src="{{pathForImage(image)}}" style="width: 100%; height: 100%;">
+
+           <div class="button-bar bar-positive">
+            <button class="button icon-left ion-camera" ng-click="loadImage()">Take Photo</button>
+            <button class="button icon-left ion-upload" ng-click="uploadImage()" ng-disabled="image === null">Upload</button>
+          </div>
+      </div> -->    
     <!--   <iframe src="http://192.168.43.78/petcare/try.php"></iframe> -->
-    Iframe here:
 
-    <iframe ng-src="http://192.168.43.78/petcare/try.php" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<!--     <iframe ng-src="http://192.168.43.78/petcare/try.php" width="WIDTH" height="HEIGHT" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+
+ -->
+  <ion-list>
+        <div class="card">
+            <ion-item>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/wyVM1evRxNw" frameborder="0" width="560" height="315"></iframe>
+                </div>
+            </ion-item>
+        </div>
+        <div class="card">
+            <ion-item>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/gvI2ClWqHO0" frameborder="0" width="560" height="315"></iframe>
+                </div>
+            </ion-item>
+        </div>
+        <div class="card">
+            <ion-item>
+                <div class="video-container">
+                    <iframe src="http://www.youtube.com/embed/uJAWaE11Jf4" frameborder="0" width="560" height="315"></iframe>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+
       </ion-content>
     
 <!--       <ion-footer-bar class="bar bar-positive">
@@ -79,5 +107,22 @@
     
 
     </ion-pane>
+
+    <style type="text/css">
+      .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    </style>
+
   </body>
 </html>
