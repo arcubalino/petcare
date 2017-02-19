@@ -138,6 +138,9 @@ $scope.uploadImage = function() {
  //===================== The rest of the app comes in here
 })
 
+.config(function ($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://192.168.43.78/petcare/']);
+})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
